@@ -1,13 +1,15 @@
 import { CountElement } from "@shared/ui/countElement";
+import { useTranslation } from "react-i18next";
 
 import about from "@assets/additional/about.svg";
 
 export const AboutCompanyFeature = () => {
+  const { t } = useTranslation();
   return (
     <>
       <section className="mobile flex flex-col items-center">
         <h3 className="text-center">
-          Наши <span className="orange">Результаты</span>
+          {t('resultsOur')} <span className="orange">{t('resultsSimp')} </span>
         </h3>
         <p className="paragraph mt-4">
           Идейные соображения высшего порядка, а также консультация с широким
@@ -52,14 +54,10 @@ export const AboutCompanyFeature = () => {
       <section className="pc w-full flex justify-between items-start mt-20">
         <div className="flex flex-col items-start">
           <h3 className="text-left w-[60%]">
-            Наши <span className="orange">Результаты</span>
+            {t('resultsOur')} <span className="orange">{t('resultsSimp')} </span>
           </h3>
           <p className="paragraph mt-4 w-[60%]">
-            Идейные соображения высшего порядка, а также консультация с широким
-            активом позволяет оценить значение дальнейших направлений развития.
-            Не следует, однако забывать, что реализация намеченных плановых
-            заданий представляет собой интересный эксперимент проверки
-            дальнейших направлений развития.
+            {t('resultsParagraph')}
           </p>
         </div>
         <img src={about} alt="about" className="w-1/3" />
@@ -72,7 +70,7 @@ export const AboutCompanyFeature = () => {
               direction={"left"}
               duration={4}
               color="orange"
-              text="Реализованный проект"
+              text={t('project')}
               marginTop="mt-12"
             />
           </span>
@@ -82,7 +80,7 @@ export const AboutCompanyFeature = () => {
               direction={"left"}
               duration={4}
               color="orange"
-              text="Часа на связи"
+              text={t('hours')}
               marginTop="mt-12"
             />
           </span>
@@ -92,7 +90,7 @@ export const AboutCompanyFeature = () => {
               direction={"left"}
               duration={4}
               color="orange"
-              text="Логотипов нарисованно"
+              text={t('logo')}
               marginTop="mt-12"
             />
           </span>
@@ -102,7 +100,7 @@ export const AboutCompanyFeature = () => {
               direction={"left"}
               duration={4}
               color="orange"
-              text="Довольных клиента"
+              text={t('clients')}
               marginTop="mt-12"
             />
           </span>

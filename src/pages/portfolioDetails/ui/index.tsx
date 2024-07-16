@@ -7,10 +7,12 @@ import { PortfolioInfo } from "@shared/lib/data/portfolioContent";
 import { Fade, Slide } from "react-awesome-reveal";
 import { ScrollButton } from "@shared/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 
 import "./styles.scss";
 
 export const PortfolioDetails: React.FC<PortfolioInfo> = (props) => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -55,7 +57,7 @@ export const PortfolioDetails: React.FC<PortfolioInfo> = (props) => {
       <section className="w-[86.6%] m-auto flex items-start justify-between mt-96 portfolio-content max-[440px]:!mt-36 min-[2560px]:!mt-[560px]">
         <Slide direction="left">
           <h2 className="text-6xl text-custom-black max-[440px]:!mt-12">
-            Задачи <span className="orange">проекта</span>{" "}
+            {t('portfolioProject')} <span className="orange">{t('portfolioTask')}</span>{" "}
           </h2>
         </Slide>
         <div className="inline-flex flex-col items-start w-[40%] slide">
@@ -65,7 +67,7 @@ export const PortfolioDetails: React.FC<PortfolioInfo> = (props) => {
               className="project_btn hoverable"
               onClick={() => window.open(`${props.linkProject}`)}
             >
-              Ссылка на проект
+              {t('link')}
             </button>
           </Slide>
         </div>
@@ -82,7 +84,7 @@ export const PortfolioDetails: React.FC<PortfolioInfo> = (props) => {
         <div className="flex flex-col items-start w-[50%] max-[440px]:w-full mt-10">
           <Slide direction="right" cascade damping={0.2} className="w-full">
             <h3 className="text-6xl text-custom-black max-[440px]:w-full ">
-              Адаптация <span className="orange">проекта</span>{" "}
+              {t('portfolioAdaptive')} <span className="orange"> {t('portfolioProd')}</span>{" "}
             </h3>
             <p className="paragraph mt-5 w-[100%]">
               {props.adaptiveDescription[0].text}
@@ -103,7 +105,7 @@ export const PortfolioDetails: React.FC<PortfolioInfo> = (props) => {
       <section className="w-[86.6%] m-auto flex items-center justify-center flex-col mt-20 portfolio-content">
         <Slide direction="left">
           <h2 className="text-6xl text-custom-black max-[440px]:text-4xl">
-            Технологический <span className="orange">стэк</span>{" "}
+            {t('portfolioTech')}<span className="orange"> {t('portfolioStack')}</span>{" "}
           </h2>
         </Slide>
         <div className="w-[35%] flex justify-between items-start mt-10 mb-20 max-[440px]:w-full">
@@ -137,7 +139,7 @@ export const PortfolioDetails: React.FC<PortfolioInfo> = (props) => {
         />
       </section>
       <div className="flex justify-center mt-10">
-        <ScrollButton to={"upper"} text="Вверх" marginTop="mt-0" />
+        <ScrollButton to={"upper"} text={t('upper')} marginTop="mt-0" />
       </div>
       <Footer />
     </div>

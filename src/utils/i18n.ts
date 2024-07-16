@@ -48,6 +48,23 @@ const resources = {
             'capabilities': 'Capabilities',
             'servicesSec': 'Services',
             'application': 'Application',
+            'secondPortfolioParagraph': 'Considerations of a higher order, as well as consultation with a wide range of stakeholders, allow us to assess the significance of further development directions. However, it should not be forgotten that implementation.',
+            'develop': 'Website development',
+            'resultsOur': 'Our',
+            'resultsSimp': 'Results',
+            'resultsParagraph': 'Considerations of a higher order, as well as consultation with a wide range of stakeholders, allow us to assess the significance of further development directions. However, it should not be forgotten that the implementation of the planned tasks is an interesting experiment in testing the further development directions.',
+            'project': 'Completed project',
+            'hours': 'Support',
+            'logo': 'Logos designed',
+            'clients': 'Satisfied clients',
+            'portfolioProject': 'Project',
+            'portfolioTask': 'tasks',
+            'link': 'Project link',
+            'portfolioProd': 'adaptation',
+            'portfolioAdaptive': 'Project',
+            'portfolioTech': 'Technological',
+            'portfolioStack': 'stack',
+            'upper': 'Upper',
         }
     },
     ru: {
@@ -93,6 +110,23 @@ const resources = {
             'capabilities': 'Возможности',
             'servicesSec': 'Сервисы',
             'application': 'Заявка',
+            'secondPortfolioParagraph': 'Идейные соображения высшего порядка, а также консультация с широким активом позволяет оценить значение дальнейших направлений развития. Не следует, однако забывать, что реализация.',
+            'develop': 'Разработка сайта',
+            'resultsOur': 'Наши',
+            'resultsSimp': 'Результаты',
+            'resultsParagraph': 'Идейные соображения высшего порядка, а также консультация с широким активом позволяет оценить значение дальнейших направлений развития. Не следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития.',
+            'project': 'Реализованный проект',
+            'hours': 'Часа на связи',
+            'logo': 'Логотипов нарисованно',
+            'clients': 'Довольных клиента',
+            'portfolioProject': 'Задачи',
+            'portfolioTask': 'Проекта',
+            'link': 'Ссылка на проект',
+            'portfolioProd': 'проекта',
+            'portfolioAdaptive': 'Адаптация',
+            'portfolioTech': 'Технологический ',
+            'portfolioStack': 'стэк',
+            'upper': 'Вверх',
         }
     }
 };
@@ -101,7 +135,7 @@ i18n
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
         resources,
-        lng: "ru", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+        lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
         // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
         // if you're using a language detector, do not define the lng option
 

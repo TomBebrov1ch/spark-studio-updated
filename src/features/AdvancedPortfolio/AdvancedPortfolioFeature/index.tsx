@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import { Navigation, Parallax, Autoplay } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,6 +14,7 @@ import "swiper/css/autoplay";
 import "./styles.scss";
 
 export const AdvancedPortfolioFeature = () => {
+  const { t } = useTranslation();
   const [bgImage, setBgImage] = useState("one");
   const navigate = useNavigate();
 
@@ -29,37 +31,37 @@ export const AdvancedPortfolioFeature = () => {
     {
       id: 0,
       title: "AS & Partners",
-      description: "Разработка сайта",
+      description: `${t('develop')}`,
       navigation: "as_partners",
     },
     {
       id: 1,
       title: "Cargo Express PV",
-      description: "Разработка сайта",
+      description: `${t('develop')}`,
       navigation: "cargo",
     },
     {
       id: 2,
       title: "Sharbakty Bidai",
-      description: "Разработка сайта",
+      description: `${t('develop')}`,
       navigation: "sharbakty",
     },
     {
       id: 3,
       title: "Special Solutions",
-      description: "Разработка сайта",
+      description: `${t('develop')}`,
       navigation: "special_solutions",
     },
     {
       id: 4,
       title: "AGRO PARTNERS PV",
-      description: "Разработка сайта",
+      description: `${t('develop')}`,
       navigation: "agro",
     },
     {
       id: 5,
       title: "China Drive",
-      description: "Разработка сайта",
+      description: `${t('develop')}`,
       navigation: "china_drive",
     },
   ];
@@ -73,14 +75,12 @@ export const AdvancedPortfolioFeature = () => {
     <>
       <Slide direction="left">
         <h4 className="w-[90%] mt-20 m-auto text-center">
-          Наше <span className="orange">портфолио</span>
+          {t('portfolioOur')} <span className="orange">{t('portfolioSecond')}</span>
         </h4>
       </Slide>
       <Slide direction="right">
         <p className="mt-4 w-[90%] m-auto min-[1024px]:text-center min-[1024px]:w-[40%]">
-          Идейные соображения высшего порядка, а также консультация с широким
-          активом позволяет оценить значение дальнейших направлений развития. Не
-          следует, однако забывать, что реализация.
+          {t('secondPortfolioParagraph')}
         </p>
       </Slide>
       <Slide direction="left" className="mt-10">
